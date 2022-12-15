@@ -91,11 +91,11 @@ class EvaluateStringExpression:
             # self.size += 1
         # print(f"i is {i} in insert ")
 
-    def infix_to_postfix(self, infix_input: list) -> list:
+    def infix_to_postfix(self, infix_input: str) -> list:
         """
         Converts infix expression to postfix.
         Args:
-            infix_input(list): infix expression user entered
+            infix_input(str): infix expression user entered
         """
 
         # precedence order and associativity helps to determine which
@@ -176,12 +176,11 @@ class EvaluateStringExpression:
         return postfix
     
     def main(self,infix_expression):
-        infix_expression_list = list(infix_expression)
 
-        postfix_expression_list = self.infix_to_postfix(infix_expression_list)
+        postfix_expression_list = self.infix_to_postfix(infix_expression)
         # print(postfix_expression_list)
         self.insert(postfix_expression_list)
         if(self.root):
             # print(self.root.data)
-            result = self.evaluate(self.root)
-            print(result)
+            result = self.evaluate()
+            return result
