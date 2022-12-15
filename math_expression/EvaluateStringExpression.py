@@ -1,4 +1,5 @@
 from BinaryTreeNode import BinaryTreeNode
+import sys
 
 class EvaluateStringExpression:
     def __init__(self) -> None:
@@ -184,3 +185,8 @@ class EvaluateStringExpression:
             # print(self.root.data)
             result = self.evaluate()
             return result
+
+if __name__ == "__main__":
+    EvaluateStringExpression = EvaluateStringExpression()
+    result = EvaluateStringExpression.main(sys.argv[1])
+    print(result)
